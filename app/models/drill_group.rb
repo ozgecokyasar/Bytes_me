@@ -1,0 +1,2 @@
+class DrillGroup < ApplicationRecord
+end

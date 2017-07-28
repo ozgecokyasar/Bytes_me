@@ -1,0 +1,2 @@
+class AttemptedDrill < ApplicationRecord
+end
