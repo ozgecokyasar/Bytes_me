@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-
   def user_signed_in?
     if session[:user_id].present? && current_user.nil?
       session[:user_id] = nil
@@ -23,6 +22,5 @@ class ApplicationController < ActionController::Base
       redirect_to new_session_path, notice: 'Please sign in'
     end
   end
-
 
 end
