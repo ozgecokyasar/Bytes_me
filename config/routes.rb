@@ -15,7 +15,9 @@ Rails.application.routes.draw do
      end
    end
 
-
+resources :drills do
+  resources :answers
+end
 
 
    resources :drill_groups do
