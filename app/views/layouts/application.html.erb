@@ -9,38 +9,37 @@
   </head>
 
   <body>
+    <!-- navbar -->
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
           <%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %>
-          <%= link_to 'menu', home_path, class: "brand-logo" %>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
           <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <% if user_signed_in? %>
+                <li>Hello, <%= current_user.full_name %>!</li>
+                <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
+              <% else %>
+                <li><%= link_to 'Log In', new_session_path %> </li>
+                <li><%= link_to 'Sign Up', new_user_path %> </li>
+              <% end %>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
             <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
           </ul>
         </div>
       </nav>
     </div>
+    <!-- navbar end -->
 
-    <div>
-      <span><%= link_to 'Home', home_path %></span>
-      |
-      <% if user_signed_in? %>
-        <span>Hello, <%= current_user.full_name %>!</span>
-        |
-        <span><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></span>
-      <% else %>
-        <span><%= link_to 'Log In', new_session_path %> </span>
-        |
-        <span><%= link_to 'Sign Up', new_user_path %> </span>
-      <% end %>
-        |
-    </div>
-
-
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $(".button-collapse").sideNav();
+      });
+    </script>
 
     <%= yield %>
   </body>
