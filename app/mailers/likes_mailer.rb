@@ -1,0 +1,2 @@
+class LikesMailer < ApplicationMailer
+end
