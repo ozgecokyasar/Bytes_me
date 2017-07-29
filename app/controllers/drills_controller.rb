@@ -28,14 +28,14 @@ class DrillsController < ApplicationController
   end
 
   def update
-    @drill = Drill.new(drill_params)
+    @drill = Drill.find(params[:id])
 
-    if @drill.save
-      flash[:notice] = "Drill created successfully"
+    if @drill.update_attributes(drill_params)
+      flash[:notice] = "Drill updated successfully"
       redirect_to(drills_path)
     else
-      flash[:error] = "Drill was not created!"
-      render("new")
+      flash[:error] = "Drill was not updated!"
+      render("edit")
     end
   end
 
