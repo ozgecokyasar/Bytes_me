@@ -19,7 +19,7 @@ while i < 20 do
   last_name: Faker::Superhero.name,
   email: "#{i}@email.com",
   password: "supersecret",
-  is_admin?: false
+  is_admin?: false)
   i = i + 1;
 end
 
