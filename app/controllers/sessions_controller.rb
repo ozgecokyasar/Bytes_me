@@ -27,7 +27,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to home, notice: 'signed out!!'
   end
-  end
 
 
 
