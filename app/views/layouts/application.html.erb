@@ -12,17 +12,19 @@
     <!-- navbar -->
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
-          <%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <% if user_signed_in? %>
-                <li>Hello, <%= current_user.full_name %>!</li>
-                <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
-              <% else %>
-                <li><%= link_to 'Log In', new_session_path %> </li>
-                <li><%= link_to 'Sign Up', new_user_path %> </li>
-              <% end %>
-          </ul>
+        <div class="container">
+          <div class="nav-wrapper">
+            <%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %>
+            <ul id="nav-mobile" class="right">
+                <% if user_signed_in? %>
+                  <li>Hello, <%= current_user.full_name %>!</li>
+                  <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
+                <% else %>
+                  <li><%= link_to 'Log In', new_session_path %> </li>
+                  <li><%= link_to 'Sign Up', new_user_path %> </li>
+                <% end %>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
