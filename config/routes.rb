@@ -8,11 +8,15 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
 
+
   resources :drills do
      member do
        get :delete
      end
    end
+
+
+
 
    resources :drill_groups do
      member do
