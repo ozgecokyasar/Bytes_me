@@ -1,4 +1,3 @@
-<%= link_to("<<<< Back to Drill list", drills_path, :class => "back-link") %>
 <div class="new drills">
   <h2>Create Drills</h2>
   <%= form_for(@drill) do |f| %>
@@ -16,8 +15,9 @@
         <td><%= f.text_field(:drill_group_id) %></td>
       </tr>
     </table>
-    <div class="form-buttons">
-      <%= f.submit("Create Drill") %>
+    <div >
+      <%= f.submit("Create Drill", class:'waves-effect waves-light btn') %>
+      <%= link_to("Back to Drill list", drills_path, :class => "waves-effect waves-light btn ") %>
     </div>
   <% end %>
 </div>

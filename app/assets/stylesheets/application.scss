@@ -14,9 +14,12 @@
  *= require_self
 
 */
-
+@import "materialize/components/color";
+$primary-color: color("indigo", "lighten-1") !default;
+$secondary-color: color("indigo", "darken-1") !default;
 @import "materialize";
 @import "font-awesome";
+
 
 
 .field_with_errors input, .field_with_errors textarea {
@@ -46,8 +49,31 @@ color: lightblue;
 
 
 .signIn-left{
-  float:left;
+  float:left
 }
 .signIn-right{
-  float: right;
+  float:right;
+}
+.butonIndex{
+  display: flex;
+}
+
+.btn1{
+  margin-left: 10px;
+}
+
+.fa {
+  font-size: 30px;
+  float: left;
+  margin: 20px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
