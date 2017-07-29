@@ -12,7 +12,42 @@
  *
  *= require_tree .
  *= require_self
- */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+*/
+
+@import "materialize";
+@import "font-awesome";
+
+
+.field_with_errors input, .field_with_errors textarea {
+  border: medium solid red;
+}
+
+
+.alert{
+ border-radius: 5px;
+ padding: 1em;
+}
+
+.alert.alert-success{
+ background-color: Yellowgreen;
+}
+
+.alert.alert-danger{
+ background-color: Salmon;
+}
+
+.navbarHello{
+padding-top: 15px;
+padding-bottom: 15px;
+color: lightblue;
+}
+
+
+
+.signIn-left{
+  float:left;
+}
+.signIn-right{
+  float: right;
+}

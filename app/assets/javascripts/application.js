@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery3
-//= require bootstrap-sprockets
+//= require materialize
 //= require rails-ujs
 //= require_tree .
+
+$( document ).ready(function() {
+  $(".button-collapse").sideNav();
+});

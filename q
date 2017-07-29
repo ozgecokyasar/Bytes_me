@@ -1,0 +1,102 @@
+[33mcommit 5c8276e351cb9ea39106e605d5651b00d67c3d36[m
+Merge: 95e5c2c f0c19c0
+Author: nsid98 <sidharthnayyar1@hotmail.com>
+Date:   Fri Jul 28 18:45:13 2017 -0700
+
+    Merge pull request #1 from ozgecokyasar/user_auth
+    
+    User auth
+
+[33mcommit f0c19c03a18604131081e54c894c88a59ee5f528[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 18:38:35 2017 -0700
+
+    add mailers
+
+[33mcommit dcfce69c088f82483517c63f553a21d3be1c465e[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 18:25:16 2017 -0700
+
+    removed extra | text
+
+[33mcommit dcdbef54a7b6b973f75cb66e25974a25101beca8[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 18:22:50 2017 -0700
+
+    -removed duplicate ujs
+    -implemented sign up, sign in, sign out
+
+[33mcommit 01cd8b87b2a79242851f36534f55c516948e35b8[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 18:12:26 2017 -0700
+
+    commit #n
+
+[33mcommit 9ece6741ae1f5640e7ac8a5e23f37ea96f9feff5[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 18:11:30 2017 -0700
+
+    - finish user controller
+
+[33mcommit 434d2d0fef6d4b912f80bfd3164b8ef93e2fe20c[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 17:49:57 2017 -0700
+
+    - add craete method to user controller
+
+[33mcommit cc2b95abf0784ee2c1b2c314bb36c5ed28beee52[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 17:49:18 2017 -0700
+
+    erase extra end
+
+[33mcommit 5d9c80ebb4c9581fef4826ea16c9745bf2d4ad22[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 17:45:36 2017 -0700
+
+    -add signup page
+
+[33mcommit 1dc0d2f6f84fa8ff62830157b063c5efbc804c50[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 17:44:24 2017 -0700
+
+    - add destroy method in sessions controller
+    - add create method in users controller
+
+[33mcommit 7433120fc974051c62fafa73c47ea7ccc1681a8e[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 17:36:52 2017 -0700
+
+    - add create to session controller
+
+[33mcommit 7dc44d04b71f26d3536a1ec65ac83bf1347ca219[m
+Author: jangroy <jangroy@hotmail.com>
+Date:   Fri Jul 28 17:19:40 2017 -0700
+
+    -add sessions view
+    -add users view
+    -add routes
+
+[33mcommit 55f7b047a5f8d667937110778950cdba5a45def5[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 17:16:00 2017 -0700
+
+    add controller
+
+[33mcommit ba301bb88901ef3ec1f4f5b2c24dc4980f4fc16c[m
+Author: Mohmed Bamhraz <mohmedbamhrz@gmail.com>
+Date:   Fri Jul 28 17:03:11 2017 -0700
+
+    add user controller
+
+[33mcommit 95e5c2c1ec4a9e708dd4568fe2b0c2e04398396d[m
+Author: Sidharth Nayyar <sidharthnayyar1@hotmail.com>
+Date:   Fri Jul 28 16:33:33 2017 -0700
+
+    add references
+
+[33mcommit 4579f96f094558afef89c9a24032f1dfa35f2590[m
+Author: Sidharth Nayyar <sidharthnayyar1@hotmail.com>
+Date:   Fri Jul 28 16:07:53 2017 -0700
+
+    first commit
