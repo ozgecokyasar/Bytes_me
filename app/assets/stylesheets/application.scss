@@ -62,13 +62,18 @@ color: lightblue;
   margin-left: 10px;
 }
 
-.background {
-  height: 300px;
-}
-
-
 .fa {
   font-size: 30px;
   float: left;
   margin: 20px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
