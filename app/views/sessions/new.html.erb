@@ -9,8 +9,9 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <%= submit_tag "Log In to Amazon" %>
+  <%= submit_tag "Log In to Amazon", class: 'waves-effect waves-light btn' %>
 <% end %>
 
-<span>Forgot password?</span>
-<span><%= link_to 'Don\'t have an account? Sign up', new_user_path %></span>
+<br />
+<span class="signIn-left">Forgot password?</span>
+<span class="signIn-right"><%= link_to 'Don\'t have an account? Sign up', new_user_path %></span>
