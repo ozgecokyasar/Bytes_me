@@ -12,7 +12,9 @@
 //
 //= require jquery3
 //= require materialize
-//= require bootstrap-sprockets
 //= require rails-ujs
 //= require_tree .
 
+$( document ).ready(function() {
+  $(".button-collapse").sideNav();
+});
