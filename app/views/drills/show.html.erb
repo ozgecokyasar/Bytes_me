@@ -1,1 +1,8 @@
-<h2><%=@drill%></h2>
+<h2><%=@drill.title%></h2>
+
+
+ <form class="" action="index.html" method="post">
+   <%@answers.each do |answer|%>
+   <input type="radio" name="" value=""><%=answer.body%> </input>
+   <%end%>
+ </form>
