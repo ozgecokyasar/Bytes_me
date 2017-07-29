@@ -3,6 +3,15 @@ class DrillGroupsController < ApplicationController
     @drill_groups = DrillGroup.order("id")
   end
 
+  def show
+    # byebug
+    # if redirect from new drill create =>
+    @drill_group = DrillGroup.find(params[:id])
+    # if its a render
+    # @drill_group = Drill.find(params[:id]).drill_group
+    @drills = @drill_group.drills
+  end
+
   def new
     @drill_group = DrillGroup.new
   end

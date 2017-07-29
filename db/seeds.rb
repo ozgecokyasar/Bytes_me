@@ -31,7 +31,7 @@ end
   )
 end
 
-10.times do
+50.times do
   d = Drill.create(
   title: Faker::Hacker.say_something_smart,
   points: 0,

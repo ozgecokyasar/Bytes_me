@@ -1,0 +1,18 @@
+
+
+<div class="index drills">
+
+<h2><%= link_to("Add a new Drill", new_drill_path) %></h2>
+  <table class = "listing">
+  <%@drills.each do |d|%>
+  <tr>
+    <td><%= link_to(d.title,  drill_path(d)) %> </td>
+    <td><%= d.points %></td>
+    <td>
+      <%= link_to("Edit", edit_drill_path(d), :class => "action edit") %>
+      <%= link_to("Delete", delete_drill_path(d), :class => "action delete") %>
+    </td>
+  </tr>
+  <%end%>
+  </table>
+</div>
