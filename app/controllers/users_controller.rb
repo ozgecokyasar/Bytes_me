@@ -8,8 +8,17 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
 
-  end
 
+    if @user.save
+      session[:user_id] = @user.id
+
+      redirect_to home, notice: 'Thank you for singing up'
+    else
+      flash.now[:alert] = @user.errors.full_messages.join(', ')
+      render :new
+    end
+
+  end
 
 
 
