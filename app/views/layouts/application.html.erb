@@ -13,9 +13,9 @@
       <span><%= link_to 'Home', home_path %></span>
       |
       <% if user_signed_in? %>
-        <span>Hellp, <%= current_user.full_name %>!</span>
+        <span>Hello, <%= current_user.full_name %>!</span>
         |
-        <span><%= link_to 'Sign Out', session_path, method: :delete%></span>
+        <span><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></span>
       <% else %>
         |
         <span><%= link_to 'Log In', new_session_path %> </span>
