@@ -20,7 +20,6 @@ class DrillsController < ApplicationController
 
   def create
     @drill = Drill.new(drill_params)
-    byebug
     if @drill.save
       flash[:notice] = "Drill created successfully"
       redirect_to(drill_group_path(@drill.drill_group))

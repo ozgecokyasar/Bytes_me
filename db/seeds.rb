@@ -40,14 +40,14 @@ end
   3.times do
     a = Answer.create(
     body: Faker::ChuckNorris.fact,
-    is_correct?: false,
+    is_correct: false,
     drill_id: d.id
     )
   end
 
   a = Answer.create(
   body: Faker::ChuckNorris.fact,
-  is_correct?: true,
+  is_correct: true,
   drill_id: d.id
   )
 end
