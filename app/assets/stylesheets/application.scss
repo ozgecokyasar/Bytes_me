@@ -63,9 +63,6 @@ color: lightblue;
   font-size: 30px;
   float: left;
   margin: 20px;
-}
-
-.fa {
   transition: all 0.2s ease-in-out;
 }
 
@@ -73,49 +70,42 @@ color: lightblue;
   color: black;
 }
 
+.bg-color {
+  background-color: rgba(20,138,124,0.6);
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-.navbar-fixed {
-  position: fixed;
-  top:0;
-}
-
 main {
   flex: 1 0 auto;
 }
 
 .page-footer {
-  background-color: #008060;
+  background-color: rgba(20,138,124,1);
   padding:0px;
   position:relative;
   z-index: 5
-}
 
+}
 .row {
   margin-bottom: 0px;
 }
 
-.bg-color {
-  background-color: #009973;
-  padding-top: 50px;
-}
-
 
 nav {
-  background-color: transparent;
+  background-color: rgba(20,138,124,1);
   box-shadow: none;
-  text-shadow: 2px 2px #009973;
 }
 
 nav > a {
   border-bottom-color: thick solid black;
 }
 
+
 .box-page {
-  margin-top:12.5px;
   padding-top:25px;
   padding-bottom:50px;
   background-color:rgba(255, 255, 255, 1);
@@ -153,6 +143,11 @@ nav > a {
   background-color: #2D89E2
 }
 
+<<<<<<< HEAD
 .checkBoxDrill{
 margin-left: 10px;
+=======
+.signup-button {
+  border: thin white solid;
+>>>>>>> a4dd3f1bae99d557a6a78db557bb2d1af308db8f
 }
