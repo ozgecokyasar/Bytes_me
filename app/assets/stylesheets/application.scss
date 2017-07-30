@@ -81,12 +81,30 @@ main {
 }
 
 page-footer {
-  height: 50px;
-}
-footer {
+  height: 40px;
 }
 
 .video-background {
-  width: 200px;
-  margin-left: -200px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+nav .brand-logo {
+  text-shadow: 2px 2px #ff0000;
+}
+
+nav ul a {
+  text-shadow: 2px 2px #ff0000;
+}
+
+.content {
+  position: relative;
 }
