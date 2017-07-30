@@ -9,7 +9,7 @@ class AttemptedDrillsController < ApplicationController
     @attempted_drill.is_correct = Answer.find_by_id(attempt_params).is_correct?
     @attempted_drill.save
     if(@attempted_drill.is_correct)
-      byebug
+      # byebug
       flash[:success] = "You were right! You have gained #{Drill.find_by_id(@attempted_drill.drill_id).points} points"
       User.last.update(score: current_user.score + Drill.find_by_id(@attempted_drill.drill_id).points.to_i)
     else
