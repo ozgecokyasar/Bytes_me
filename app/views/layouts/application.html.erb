@@ -15,7 +15,10 @@
         <div class="container">
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
-            <ul class="right">
+            <a href="#" data-activates="slide-out" class="right button-collapse">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
               <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
                 <li>Hello, <%= current_user.full_name %>!</li>
@@ -25,14 +28,23 @@
                 <% else %>
                   <li><%= link_to 'Log In', new_session_path %> </li>
                   <li><%= link_to 'Sign Up', new_user_path %> </li>
-
-
                 <% end %>
             </ul>
+
           </div>
         </div>
       </nav>
     </div>
+    <ul class="right side-nav" id="slide-out">
+      <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
+        <% if user_signed_in? %>
+          <li>Hello, <%= current_user.full_name %>!</li>
+          <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
+        <% else %>
+          <li><%= link_to 'Log In', new_session_path %> </li>
+          <li><%= link_to 'Sign Up', new_user_path %> </li>
+        <% end %>
+    </ul>
     <!-- navbar end -->
 
   <main class="bg-color">
