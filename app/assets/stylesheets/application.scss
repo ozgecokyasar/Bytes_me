@@ -140,3 +140,13 @@ nav ul a {
   margin: auto;
 
 }
+
+.right {
+  display: flex;
+}
+
+.right li {
+  flex: 1;
+  border: thin white solid;
+  margin-right: 10px;
+}
