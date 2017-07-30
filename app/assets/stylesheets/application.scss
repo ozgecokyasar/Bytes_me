@@ -63,14 +63,15 @@ color: lightblue;
   font-size: 30px;
   float: left;
   margin: 20px;
-}
-
-.fa {
   transition: all 0.2s ease-in-out;
 }
 
 .fa:hover {
   color: black;
+}
+
+.bg-color {
+  background-color: rgba(20,138,124,0.6);
 }
 
 body {
@@ -83,7 +84,7 @@ main {
 }
 
 .page-footer {
-  background-color: rgba(20,138,124,0.6);
+  background-color: rgba(20,138,124,1);
   padding:0px;
   position:relative;
   z-index: 5
@@ -95,7 +96,7 @@ main {
 
 
 nav {
-  background-color: rgba(20,138,124,0.6);
+  background-color: rgba(20,138,124,1);
   box-shadow: none;
 }
 
@@ -105,7 +106,6 @@ nav > a {
 
 
 .box-page {
-  margin-top:12.5px;
   padding-top:25px;
   padding-bottom:50px;
   background-color:rgba(255, 255, 255, 1);
