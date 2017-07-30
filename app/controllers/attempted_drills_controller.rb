@@ -8,6 +8,9 @@ class AttemptedDrillsController < ApplicationController
     @attempted_drill.drill_group_id = Answer.find_by_id(attempt_params).drill.drill_group.id
     @attempted_drill.is_correct = Answer.find_by_id(attempt_params).is_correct?
     @attempted_drill.save
+    if(@attempted_drill.is_correct)
+      current_user.score = current_user.score + Drill.find_by_id(@attempted_drill.drill_id).points
+    end
     redirect_to drill_group_path(Answer.find_by_id(attempt_params).drill.id)
   end
   end

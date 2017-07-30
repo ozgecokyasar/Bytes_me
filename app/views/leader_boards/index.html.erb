@@ -1,0 +1,25 @@
+<div class="index drills">
+  <h2>Drills Leader Board</h2>
+  <%= link_to("Add New Drills", new_drill_path, :class => "waves-effect waves-light btn") %>
+  <div>
+    <table class="listing">
+      <tr class="header">
+        <th>No.</th>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+      <% counter = 0
+      @users.each do |user| %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= user.first_name %></td>
+          <td><%= user.score %></td>
+        </tr>
+      <% end %>
+    </table>
+</div>
+<div class="">
+  <h4>Your score</h4>
+  <h5><%= current_user.score %></h5>
+</div>
+</div>
