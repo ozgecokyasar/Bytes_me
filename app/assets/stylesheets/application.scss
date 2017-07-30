@@ -21,7 +21,6 @@ $secondary-color: color("indigo", "darken-1") !default;
 @import "font-awesome";
 
 
-
 .field_with_errors input, .field_with_errors textarea {
   border: medium solid red;
 }
@@ -140,4 +139,13 @@ nav ul a {
 
 .text-center {
   text-align: center;
+}
+
+.drill_groups {
+  display: flex;
+}
+
+.drill_groups_contents {
+  margin: auto;
+
 }
