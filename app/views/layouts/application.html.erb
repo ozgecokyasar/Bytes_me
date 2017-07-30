@@ -16,6 +16,15 @@
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
             <ul class="right">
+              <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
+                <% if user_signed_in? %>
+                  <li>Hello, <%= current_user.full_name %>!</li>
+                  <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
+                <% else %>
+                  <li><%= link_to 'Drills', drills_path	 %> </li>
+                  <li><%= link_to 'Log In', new_session_path %> </li>
+                  <li><%= link_to 'Sign Up', new_user_path %> </li>
+                <% end %>
               <li><%= link_to 'Drill Groups', drill_groups_path		 %> </li>
               <% if user_signed_in? %>
               <li>Hello, <%= current_user.full_name %>!</li>
