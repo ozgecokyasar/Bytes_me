@@ -76,12 +76,12 @@ body {
 }
 
 main {
-  margin-bottom: 30px;
   flex: 1 0 auto;
 }
 
-page-footer {
-  height: 40px;
+.page-footer {
+  // height: 40px;
+  background-color: #00cc99;
 }
 
 .video-background {
@@ -90,6 +90,7 @@ page-footer {
   top: 0;
   left: 0;
   z-index: -1;
+  margin-top: -100px;
 }
 
 nav {
@@ -98,13 +99,14 @@ nav {
 }
 
 nav .brand-logo {
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #00cc99;
 }
 
 nav ul a {
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #00cc99;
 }
 
-.content {
-  position: relative;
+.bg-color {
+  background-color: #00cc99;
+  margin-top: -10px;
 }
