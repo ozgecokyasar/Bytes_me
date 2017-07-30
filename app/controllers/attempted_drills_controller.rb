@@ -8,7 +8,12 @@ class AttemptedDrillsController < ApplicationController
     @attempted_drill.drill_group_id = Answer.find_by_id(attempt_params).drill.drill_group.id
     @attempted_drill.is_correct = Answer.find_by_id(attempt_params).is_correct?
     @attempted_drill.save
-    redirect_to drill_group_path(Answer.find_by_id(attempt_params).drill.id)
+    if(@attempted_drill.is_correct)
+      flash[:success] = "You were right! You have gained #{Drill.find_by_id(@attempted_drill.drill_id).points} points"
+    else
+      flash[:error] = "Wrong!!! You have gained a massive sum of ZERO points"
+    end
+    redirect_to drill_path(@attempted_drill.drill_id)
   end
   end
   private
