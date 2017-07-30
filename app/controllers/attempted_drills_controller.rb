@@ -10,6 +10,7 @@ class AttemptedDrillsController < ApplicationController
     @attempted_drill.save
     if(@attempted_drill.is_correct)
       flash[:success] = "You were right! You have gained #{Drill.find_by_id(@attempted_drill.drill_id).points} points"
+      current_user.score = current_user.score + Drill.find_by_id(@attempted_drill.drill_id).points
     else
       flash[:error] = "Wrong!!! You have gained a massive sum of ZERO points"
     end
