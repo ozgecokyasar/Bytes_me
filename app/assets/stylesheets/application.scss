@@ -121,11 +121,10 @@ nav > a {
 }
 
 .brand-logo {
-  // transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 .brand-logo:hover {
   transform: rotate(5deg) translateX(-5px) !important;
-  transition: 0.3s ease;
 }
 
 .input-field label {
