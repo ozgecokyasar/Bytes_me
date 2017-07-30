@@ -15,6 +15,7 @@
 //= require rails-ujs
 //= require_tree .
 
+
 $(document).ready(() => {
   let checkboxes = [...document.getElementsByClassName('checkbox')]
   checkboxes.map(box => {
