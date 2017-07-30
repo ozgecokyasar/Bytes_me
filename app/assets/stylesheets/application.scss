@@ -15,8 +15,8 @@
 
 */
 @import "materialize/components/color";
-$primary-color: color("indigo", "lighten-1") !default;
-$secondary-color: color("indigo", "darken-1") !default;
+$primary-color: color("white", "lighten-1") !default;
+$secondary-color: color("teal", "base") !default;
 @import "materialize";
 @import "font-awesome";
 
@@ -25,7 +25,6 @@ $secondary-color: color("indigo", "darken-1") !default;
 .field_with_errors input, .field_with_errors textarea {
   border: medium solid red;
 }
-
 
 .alert{
  border-radius: 5px;
@@ -45,8 +44,6 @@ padding-top: 15px;
 padding-bottom: 15px;
 color: lightblue;
 }
-
-
 
 .signIn-left{
   float:left
@@ -68,12 +65,88 @@ color: lightblue;
   margin: 20px;
 }
 
+.fa {
+  transition: all 0.2s ease-in-out;
+}
+
+.fa:hover {
+  color: black;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
+.navbar-fixed {
+  position: fixed;
+  top:0;
+}
 
 main {
   flex: 1 0 auto;
+}
+
+.page-footer {
+  background-color: #008060;
+  padding:0px;
+  position:relative;
+  z-index: 5
+}
+
+.row {
+  margin-bottom: 0px;
+}
+
+.bg-color {
+  background-color: #009973;
+  padding-top: 50px;
+}
+
+
+nav {
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 2px 2px #009973;
+}
+
+nav > a {
+  border-bottom-color: thick solid black;
+}
+
+.box-page {
+  margin-top:12.5px;
+  padding-top:25px;
+  padding-bottom:50px;
+  background-color:rgba(255, 255, 255, 1);
+}
+
+.brand-logo {
+  transition: 0.3s ease-in-out;
+}
+.brand-logo:hover {
+  transform: rotate(5deg) translateX(-5px) !important;
+}
+
+.input-field label {
+  color: grey;
+}
+.input-field label:not(.label-icon).active {
+  color: #009973;
+}
+
+.delete-button {
+  background-color: #EB0C46;
+}
+.testing1{
+  opacity:1;
+  position:relative;
+  pointer-events: auto
+
+}
+#drill_group_difficulty{
+  opacity:1;
+}
+.edit-button {
+  background-color: #2D89E2
 }

@@ -1,0 +1,2 @@
+module AttemptedDrillsHelper
+end

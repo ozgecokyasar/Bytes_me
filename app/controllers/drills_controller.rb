@@ -4,19 +4,25 @@ class DrillsController < ApplicationController
     @drills = Drill.order("id")
   end
 
-  # def show
-  # end
+  def show
+    @drill = Drill.find(params[:id])
+    @answers = @drill.answers
+    @attempted_drill = AttemptedDrill.new
+  end
 
   def new
     @drill = Drill.new
+    @drill.drill_group_id = params[:groupsId]
+    4.times { @drill.answers.build}
+
+
   end
 
   def create
     @drill = Drill.new(drill_params)
-
     if @drill.save
       flash[:notice] = "Drill created successfully"
-      redirect_to(drills_path)
+      redirect_to(drill_group_path(@drill.drill_group))
     else
       flash[:error] = "Drill was not created!"
       render("new")
@@ -29,7 +35,6 @@ class DrillsController < ApplicationController
 
   def update
     @drill = Drill.find(params[:id])
-
     if @drill.update_attributes(drill_params)
       flash[:notice] = "Drill updated successfully"
       redirect_to(drills_path)
@@ -54,6 +59,6 @@ class DrillsController < ApplicationController
   private
 
   def drill_params
-    params.require(:drill).permit(:title, :points, :drill_group_id)
+    params.require(:drill).permit(:title, :points, :drill_group_id, answers_attributes: [:body, :is_correct])
   end
 end

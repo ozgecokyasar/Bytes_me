@@ -29,29 +29,26 @@ end
   drill_group_name: Faker::Hacker.adjective,
   difficulty: ['easy','medium','hard'].sample
   )
-end
 
-10.times do
+50.times do
   d = Drill.create(
   title: Faker::Hacker.say_something_smart,
   points: 0,
-  drill_group_id: DrillGroup.all.sample.id
+  drill_group_id: dg.id
   )
-end
 
-20.times do
-  did = Drill.all.sample.id
-    3.times do
+  3.times do
     a = Answer.create(
     body: Faker::ChuckNorris.fact,
-    is_correct?: false,
-    drill_id: did
+    is_correct: false,
+    drill_id: d.id
     )
   end
 
-   a = Answer.create(
-    body: Faker::ChuckNorris.fact,
-    is_correct?: true,
-    drill_id: did
-    )
-  end
+  a = Answer.create(
+  body: Faker::ChuckNorris.fact,
+  is_correct: true,
+  drill_id: d.id
+  )
+end
+end

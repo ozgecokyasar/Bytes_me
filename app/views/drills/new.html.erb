@@ -1,5 +1,8 @@
+<%= link_to("<<<< Back to Drill list", drills_path, :class => "back-link") %>
 <div class="new drills">
   <h2>Create Drills</h2>
+
+
   <%= form_for(@drill) do |f| %>
     <table>
       <tr>
@@ -10,14 +13,40 @@
         <th>Drill Points</th>
         <td><%= f.text_field(:points) %></td>
       </tr>
-      <tr>
+      <tr style="display:none;">
         <th>Drill Group</th>
         <td><%= f.text_field(:drill_group_id) %></td>
       </tr>
     </table>
-    <div >
-      <%= f.submit("Create Drill", class:'waves-effect waves-light btn') %>
-      <%= link_to("Back to Drill list", drills_path, :class => "waves-effect waves-light btn ") %>
+
+    <div>
+   <p><strong>Answers:</strong></p>
+
+   <%= f.fields_for :answers do |answer| %>
+     <div>
+       <div class="">
+
+         <%= answer.label :body %>
+         <%= answer.text_field :body %>
+       </div>
+       <div>
+        <%= answer.label "Is correct?" %>
+        <%= answer.check_box :is_correct?, style:"opacity:1; pointer-events: auto;" %>
+       </div>
+
+     </div>
+   <% end %>
+ </div>
+
+
+
+
+    <div class="form-buttons">
+      <%= f.submit("Create Drill") %>
     </div>
+
+
+
+
   <% end %>
 </div>

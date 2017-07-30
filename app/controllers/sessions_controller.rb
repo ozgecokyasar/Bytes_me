@@ -14,12 +14,16 @@ class SessionsController < ApplicationController
 
 
     if user&.authenticate(params[:password])
-      session[:user_id] = user.id
-      flash[:notice] = "Logged in Successfuly"
-      redirect_to home_path
-
+      if user.email_confirmed
+        session[:user_id] = user.id
+        flash[:notice] = "Logged in Successfuly"
+        redirect_to home_path
+      else
+        flash.now[:error] = "Please activate your account"
+        render "new"
+      end
     else
-      flash.now[:alrt] = 'Wrong email or password'
+      flash.now[:alrt] = "Wrong email or password"
       render :new
     end
   end
