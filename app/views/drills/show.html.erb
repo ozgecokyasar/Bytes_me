@@ -4,5 +4,7 @@
  <form class="" action="index.html" method="post">
    <%@answers.each do |answer|%>
    <input type="radio" name="" value=""><%=answer.body%> </input>
+   <%=answer.is_correct?%>
+   <br>
    <%end%>
  </form>
