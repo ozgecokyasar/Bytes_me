@@ -15,7 +15,7 @@
 
 */
 @import "materialize/components/color";
-$primary-color: color("indigo", "lighten-1") !default;
+$primary-color: color("white", "lighten-1") !default;
 $secondary-color: color("indigo", "darken-1") !default;
 @import "materialize";
 @import "font-awesome";
@@ -25,7 +25,6 @@ $secondary-color: color("indigo", "darken-1") !default;
 .field_with_errors input, .field_with_errors textarea {
   border: medium solid red;
 }
-
 
 .alert{
  border-radius: 5px;
@@ -45,8 +44,6 @@ padding-top: 15px;
 padding-bottom: 15px;
 color: lightblue;
 }
-
-
 
 .signIn-left{
   float:left
@@ -83,6 +80,9 @@ main {
   flex: 1 0 auto;
 }
 
+page-footer {
+  height: 50px;
+}
 footer {
   margin-top: 40px;
 }
