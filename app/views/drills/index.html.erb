@@ -14,8 +14,11 @@
         <td><%= drill.title %></td>
         <td><%= drill.points %></td>
         <td>
-          <%= link_to("Edit", edit_drill_path(drill), :class => "waves-effect waves-light btn") %>
-          <%= link_to("Delete", delete_drill_path(drill), :class => "waves-effect waves-light btn ") %>
+          <div class="butonIndex">
+            <%= link_to("Edit", edit_drill_path(drill), :class => "waves-effect waves-light btn") %>
+
+            <%= link_to("Delete", delete_drill_path(drill), :class => "waves-effect delete_button waves-light btn1 btn") %>
+          </div>
         </td>
       </tr>
     <% end %>
