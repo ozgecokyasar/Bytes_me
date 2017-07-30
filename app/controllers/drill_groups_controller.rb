@@ -4,7 +4,6 @@ class DrillGroupsController < ApplicationController
   end
 
   def show
-    # byebug
     # if redirect from new drill create =>
     @drill_group = Drill.find(params[:id]).drill_group
     @drills = @drill_group.drills

@@ -2,7 +2,9 @@
 
 <div class="index drills">
 
-<h2><%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn')  %></h2>
+<%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn')  %>
+<%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn'%>
+
   <table class = "listing">
   <%@drills.each do |d|%>
   <tr>
