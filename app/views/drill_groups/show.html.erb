@@ -9,7 +9,7 @@
     <td><%= link_to(d.title,  drill_path(d)) %> </td>
     <td><%= d.points %></td>
     <td>
-      <%= link_to("Edit", edit_drill_path(d), :class => "waves-effect waves-light btn") %>
+      <%= link_to("Edit", edit_drill_path(d), :class => "waves-effect edit-button waves-light btn") %>
       <%= link_to("Delete", delete_drill_path(d), :class => "waves-effect delete-button waves-light btn") %>
     </td>
   </tr>
