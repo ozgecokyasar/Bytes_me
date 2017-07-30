@@ -10,3 +10,8 @@
   <br>
   <%= attempt.submit "Answer" %>
   <% end %>
+  <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        
+<%= link_to "Next Drill", drill_path(@drill.id + 1)%>
