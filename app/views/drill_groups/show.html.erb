@@ -2,15 +2,15 @@
 
 <div class="index drills">
 
-<h2><%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}") %></h2>
+<h2><%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}", class: 'waves-effect waves-light btn') %></h2>
   <table class = "listing">
   <%@drills.each do |d|%>
   <tr>
     <td><%= link_to(d.title,  drill_path(d)) %> </td>
     <td><%= d.points %></td>
     <td>
-      <%= link_to("Edit", edit_drill_path(d), :class => "action edit") %>
-      <%= link_to("Delete", delete_drill_path(d), :class => "action delete") %>
+      <%= link_to("Edit", edit_drill_path(d), :class => "waves-effect waves-light btn") %>
+      <%= link_to("Delete", delete_drill_path(d), :class => "waves-effect waves-light btn") %>
     </td>
   </tr>
   <%end%>
