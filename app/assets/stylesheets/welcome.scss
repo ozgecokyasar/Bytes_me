@@ -1,3 +1,31 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.overlay {
+  font-family: monospace;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+  text-shadow: 0 0 8px black;
+  margin-top: 100px;
+}
+@media (max-width:993px) {
+  .text-center {
+    font-size: 2.8em;
+    margin-top:120px;
+  }
+}
+
+.video-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}

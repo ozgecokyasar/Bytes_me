@@ -16,7 +16,7 @@
 */
 @import "materialize/components/color";
 $primary-color: color("white", "lighten-1") !default;
-$secondary-color: color("indigo", "darken-1") !default;
+$secondary-color: color("teal", "base") !default;
 @import "materialize";
 @import "font-awesome";
 
@@ -66,7 +66,7 @@ color: lightblue;
 }
 
 .fa:hover {
-  color: darkgrey;
+  color: black;
 }
 
 body {
@@ -74,24 +74,28 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+.navbar-fixed {
+  position: fixed;
+  top:0;
+}
 
 main {
   flex: 1 0 auto;
-
 }
 
 .page-footer {
-  // height: 40px;
-  background-color: #00cc99;
+  background-color: #009973;
+  padding:0px;
 }
 
-.video-background {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  margin-top: -100px;
+.row {
+  margin-bottom: 0px;
+}
+
+.bg-color {
+  background-color: #009973;
+  padding-top: 50px;
+  // z-index:-2;
 }
 
 nav {
@@ -100,44 +104,31 @@ nav {
 }
 
 nav .brand-logo {
-  text-shadow: 2px 2px #00cc99;
+  text-shadow: 2px 2px #009973;
 }
 
 nav ul a {
-  text-shadow: 2px 2px #00cc99;
+  text-shadow: 2px 2px #009973;
 }
 
-.bg-color {
-  background-color: #00cc99;
-  margin-top: -10px;
-}
-.content {
-  position: relative;
-  height: 200px;
-  background-color: grey;
-  margin: 0;
+.box-page {
+  margin-top:12.5px;
+  padding-top:25px;
+  padding-bottom:50px;
+  background-color:rgba(255, 255, 255, 1);
+  z-index: -100;
 }
 
-.container-video {
-  position:relative;
-  display: flex;
+.brand-logo {
+  transition: 0.3s ease;
 }
-.container-video video {
-    position:relative;
-    z-index:0;
-
-}
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-    color: white;
-    margin: auto;
-    padding: 90px;
-    font-family: monospace;
+.brand-logo:hover {
+  transform: rotate(5deg) translateX(-5px) !important;
 }
 
-.text-center {
-  text-align: center;
+.input-field label {
+  color: grey;
+}
+.input-field label:not(.label-icon).active {
+  color: #009973;
 }
