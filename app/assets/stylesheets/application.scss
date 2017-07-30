@@ -83,26 +83,20 @@ main {
 }
 
 .page-footer {
-  background-color: #008060;
+  background-color: rgba(20,138,124,0.6);
   padding:0px;
   position:relative;
   z-index: 5
+
 }
 .row {
   margin-bottom: 0px;
 }
 
-.bg-color {
-  background-color: #009973;
-  padding-top: 0;
-}
-
-
 
 nav {
-  background-color: teal;
+  background-color: rgba(20,138,124,0.6);
   box-shadow: none;
-  text-shadow: 2px 2px #009973;
 }
 
 nav > a {
@@ -145,4 +139,8 @@ nav > a {
 }
 .edit-button {
   background-color: #2D89E2
+}
+
+.signup-button {
+  border: thin white solid;
 }
