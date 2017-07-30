@@ -13,7 +13,7 @@ class DrillsController < ApplicationController
   def new
     @drill = Drill.new
     @drill.drill_group_id = params[:groupsId]
-    3.times { @drill.answers.build}
+    4.times { @drill.answers.build}
 
 
   end
