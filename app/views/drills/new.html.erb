@@ -23,6 +23,7 @@
    <p><strong>Answers:</strong></p>
 
    <%= f.fields_for :answers do |answer| %>
+
      <div>
        <div class="">
 
@@ -31,7 +32,7 @@
        </div>
        <div>
         <%= answer.label "Is correct?" %>
-        <%= answer.check_box :is_correct?, style:"opacity:1; pointer-events: auto;" %>
+        <%= answer.check_box :is_correct?, style:"opacity:1; pointer-events: auto;" , class:"checkbox" , id:"checkbox#{answer.index}"%>
        </div>
 
      </div>
