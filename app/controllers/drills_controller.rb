@@ -11,13 +11,15 @@ class DrillsController < ApplicationController
 
   def new
     @drill = Drill.new
-    
     @drill.drill_group_id = params[:groupsId]
+    3.times { @drill.answers.build}
+
 
   end
 
   def create
     @drill = Drill.new(drill_params)
+    byebug
     if @drill.save
       flash[:notice] = "Drill created successfully"
       redirect_to(drill_group_path(@drill.drill_group))
@@ -57,6 +59,6 @@ class DrillsController < ApplicationController
   private
 
   def drill_params
-    params.require(:drill).permit(:title, :points, :drill_group_id)
+    params.require(:drill).permit(:title, :points, :drill_group_id, answers_attributes: [:body, :is_correct])
   end
 end
