@@ -16,7 +16,7 @@
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
             <ul class="right">
-              <li><%= link_to 'Drill Groups', drill_groups_path		 %> </li>
+              <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
                   <li>Hello, <%= current_user.full_name %>!</li>
                   <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>

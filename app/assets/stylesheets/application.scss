@@ -65,6 +65,10 @@ color: lightblue;
   margin: 20px;
 }
 
+.fa {
+  transition: all 0.2s ease-in-out;
+}
+
 .fa:hover {
   color: black;
 }
@@ -86,6 +90,8 @@ main {
 .page-footer {
   background-color: #009973;
   padding:0px;
+  position:relative;
+  z-index: 5
 }
 
 .row {
@@ -95,20 +101,16 @@ main {
 .bg-color {
   background-color: #009973;
   padding-top: 50px;
-  // z-index:-2;
 }
 
 nav {
   background-color: transparent;
   box-shadow: none;
-}
-
-nav .brand-logo {
   text-shadow: 2px 2px #009973;
 }
 
-nav ul a {
-  text-shadow: 2px 2px #009973;
+nav > a {
+  border-bottom-color: thick solid black;
 }
 
 .box-page {
@@ -116,14 +118,14 @@ nav ul a {
   padding-top:25px;
   padding-bottom:50px;
   background-color:rgba(255, 255, 255, 1);
-  z-index: -100;
 }
 
 .brand-logo {
-  transition: 0.3s ease;
+  // transition: 0.3s ease;
 }
 .brand-logo:hover {
   transform: rotate(5deg) translateX(-5px) !important;
+  transition: 0.3s ease;
 }
 
 .input-field label {
