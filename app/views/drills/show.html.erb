@@ -1,13 +1,5 @@
 <h2><%=@drill.title%></h2>
 
-<!-- <% @answers.each do |answer| %>
- <li><%= radio_button_tag :answer, “#{option.id}“, false,  class: ‘radio-checkbox’ %>
- <%= label_tag "#{answer.body}" %></li>
-
- form
-
-<% end %> -->
-
 <%= form_for(@attempted_drill) do |f| %>
 <%@answers.each do |answer| %>
   <div>
@@ -17,3 +9,11 @@
 
   <%= f.submit %>
   <% end %>
+ <form class="" action="index.html" method="post">
+   <%@answers.each do |answer|%>
+   <input type="radio" name="" value=""><%=answer.body%> </input>
+   <%=answer.is_correct?%>
+   <br>
+   <%end%>
+ </form>
+
