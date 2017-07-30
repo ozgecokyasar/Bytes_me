@@ -4,8 +4,6 @@
 .overlay {
   font-family: monospace;
   color: white;
-  position: relative;
-  z-index: 1;
 }
 
 .text-center {
@@ -24,7 +22,7 @@
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .flex {
