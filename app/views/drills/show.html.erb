@@ -1,6 +1,14 @@
 <h2><%=@drill.title%></h2>
 
+<%= form_for(@attempted_drill) do |f| %>
+<%@answers.each do |answer| %>
+  <div>
+  <input type="radio" name="answer" value="<% answer.id %>"> <%=answer.body%>
+  </div>
+  <% end%>
 
+  <%= f.submit %>
+  <% end %>
  <form class="" action="index.html" method="post">
    <%@answers.each do |answer|%>
    <input type="radio" name="" value=""><%=answer.body%> </input>
@@ -8,3 +16,4 @@
    <br>
    <%end%>
  </form>
+
