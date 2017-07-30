@@ -84,7 +84,7 @@ main {
 }
 
 .page-footer {
-  background-color: rgba(20,138,124,1);
+  background-color: rgba(20,138,124,0.6);
   padding:0px;
   position:relative;
   z-index: 5
@@ -96,7 +96,7 @@ main {
 
 
 nav {
-  background-color: rgba(20,138,124,1);
+  background-color: rgba(20,138,124,0.6);
   box-shadow: none;
 }
 
@@ -138,6 +138,10 @@ nav > a {
   opacity:1;
 }
 
+[type="checkbox"] + label {
+  padding-right: 35px;
+  padding-left: 25px;
+}
 
 .edit-button {
   background-color: #2D89E2
