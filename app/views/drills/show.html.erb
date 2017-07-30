@@ -1,19 +1,11 @@
 <h2><%=@drill.title%></h2>
 
-<%= form_for(@attempted_drill) do |f| %>
-<%@answers.each do |answer| %>
-  <div>
-  <input type="radio" name="answer" value="<% answer.id %>"> <%=answer.body%>
-  </div>
-  <% end%>
 
-  <%= f.submit %>
+<%= form_for @attempted_drill do |attempt| %>
+  <% @answers.each do |answer|%>
+    <%= radio_button_tag(:answer, answer.id.to_i) %>
+    <%= label_tag( ("answer_" + "#{answer.id}").to_sym, "#{answer.body}") %>
   <% end %>
- <form class="" action="index.html" method="post">
-   <%@answers.each do |answer|%>
-   <input type="radio" name="" value=""><%=answer.body%> </input>
-   <%=answer.is_correct?%>
-   <br>
-   <%end%>
- </form>
-
+  <br>
+  <%= attempt.submit "Answer" %>
+<% end %>
