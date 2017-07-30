@@ -21,7 +21,6 @@ $secondary-color: color("teal", "base") !default;
 @import "font-awesome";
 
 
-
 .field_with_errors input, .field_with_errors textarea {
   border: medium solid red;
 }
@@ -96,11 +95,15 @@ main {
   color: #009973;
 }
 
-video {
- position:absolute;
- z-index:-1;
- top:0;
- left:0;
- width:120vh;
- height:100vh;
+.drill_groups {
+  display: flex;
+}
+
+.drill_groups_contents {
+  margin: auto;
+
+}
+
+.delete_button {
+  background-color: #EB0C46;
 }
