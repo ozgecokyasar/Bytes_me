@@ -65,6 +65,10 @@ color: lightblue;
   margin: 20px;
 }
 
+.fa:hover {
+  color: darkgrey;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -72,9 +76,12 @@ body {
 }
 
 main {
+  margin-bottom: 30px;
   flex: 1 0 auto;
 }
 
 page-footer {
   height: 50px;
+footer {
+  margin-top: 40px;
 }
