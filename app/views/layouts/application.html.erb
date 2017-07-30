@@ -17,14 +17,14 @@
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
             <ul class="right">
               <li><%= link_to 'Drill Groups', drill_groups_path		 %> </li>
-                <% if user_signed_in? %>
-                  <li>Hello, <%= current_user.full_name %>!</li>
-                  <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
-                <% else %>
-                  <li><%= link_to 'Drills', drills_path	 %> </li>
-                  <li><%= link_to 'Log In', new_session_path %> </li>
-                  <li><%= link_to 'Sign Up', new_user_path %> </li>
-                <% end %>
+              <% if user_signed_in? %>
+              <li>Hello, <%= current_user.full_name %>!</li>
+              <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
+              <% else %>
+              <li><%= link_to 'Drills', drills_path	 %> </li>
+              <li><%= link_to 'Log In', new_session_path %> </li>
+              <li><%= link_to 'Sign Up', new_user_path %> </li>
+              <% end %>
             </ul>
           </div>
         </div>
@@ -32,30 +32,32 @@
     </div>
     <!-- navbar end -->
 
-  <main class="bg-color">
     <%  unless current_page?(home_path)  %>
-    <div class="box-page">
+    <main class="bg-color">
+      <div class="box-page">
 
-      <div class="container">
-        <% if flash[:notice] %>
-        <div class='alert alert-success'>
-          <%= flash[:notice] %>
-        </div>
-        <% elsif flash[:alert] %>
-        <div class='alert alert-danger'>
-          <%= flash[:alert] %>
-        </div>
-        <% end %>
+        <div class="container">
+          <% if flash[:notice] %>
+          <div class='alert alert-success'>
+            <%= flash[:notice] %>
+          </div>
+          <% elsif flash[:alert] %>
+          <div class='alert alert-danger'>
+            <%= flash[:alert] %>
+          </div>
+          <% end %>
 
-      <% end %>
-        <%= yield %>
+          <% end %>
+
+
+          <%= yield %>
+        </div>
       </div>
-    </div>
 
-  </main>
+    </main>
 
-  <!-- footer -->
-    <footer class="page-footer">
+    <!-- footer -->
+    <footer class="StickyFooter page-footer">
       <div class="container">
         <div class="row">
           <div style="align: center" class="col-lg-12 l4 offset-l2 s12">
@@ -69,4 +71,4 @@
     </footer>
     <!-- footer end -->
   </body>
-</html>
+  </html>

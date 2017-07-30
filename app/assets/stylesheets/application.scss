@@ -15,7 +15,7 @@
 
 */
 @import "materialize/components/color";
-$primary-color: color("white", "lighten-1") !default;
+$primary-color: color("teal", "lighten-1") !default;
 $secondary-color: color("teal", "base") !default;
 @import "materialize";
 @import "font-awesome";
@@ -45,7 +45,7 @@ color: lightblue;
 }
 
 .signIn-left{
-  float:left
+  float:left;
 }
 .signIn-right{
   float:right;
@@ -62,6 +62,7 @@ color: lightblue;
   font-size: 30px;
   float: left;
   margin: 20px;
+  color:teal;
 }
 
 .fa:hover {
@@ -73,50 +74,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-.navbar-fixed {
-  position: fixed;
-  top:0;
-}
 
 main {
   flex: 1 0 auto;
 }
 
-.page-footer {
-  background-color: #009973;
-  padding:0px;
-}
 
-.row {
-  margin-bottom: 0px;
-}
-
-.bg-color {
-  background-color: #009973;
-  padding-top: 50px;
-  // z-index:-2;
-}
-
-nav {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-nav .brand-logo {
-  text-shadow: 2px 2px #009973;
-}
-
-nav ul a {
-  text-shadow: 2px 2px #009973;
-}
-
-.box-page {
-  margin-top:12.5px;
-  padding-top:25px;
-  padding-bottom:50px;
-  background-color:rgba(255, 255, 255, 1);
-  z-index: -100;
-}
 
 .brand-logo {
   transition: 0.3s ease;
