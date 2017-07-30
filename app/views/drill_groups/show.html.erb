@@ -2,8 +2,7 @@
 
 <div class="index drills">
 
-<%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn')  %>
-<%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn'%>
+  <%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn'%>
 
   <div class="index drills">
     <% if current_user != nil %>
