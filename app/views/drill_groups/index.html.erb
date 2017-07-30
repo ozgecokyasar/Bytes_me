@@ -1,26 +1,22 @@
 <div class="index drill_groups">
-  <h2>Add New Drill Group</h2>
-  <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light btn") %>
-  <table class="listing">
-    <tr class="header">
-      <th>No.</th>
-      <th>Drill Group Name</th>
-      <th>Difficulty</th>
-    </tr>
+  <h2 class="h1center">Drill Group</h2>
+
+  <div class="row">
     <% counter = 0
     @drill_groups.each do |drill_group| %>
-
-      <tr>
-        <td><%= counter += 1 %></td>
-        <td><%= link_to(drill_group.drill_group_name,  drill_group_path(drill_group)) %></td>
-        <td><%= drill_group.difficulty %></td>
-        <td>
-          <div class = 'butonIndex'>
-            <%= link_to("Edit", edit_drill_group_path(drill_group), :class => "waves-effect edit-button waves-light btn") %>
-            <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect delete-button waves-light btn btn1") %>
+        <div class="cards col s12 z-depth-3">
+          <div class="col s6">
+            <h4><%= link_to(drill_group.drill_group_name,  drill_group_path(drill_group), class: "teal-text") %></h4>
+            <%= drill_group.difficulty %>
           </div>
-        </td>
-      </tr>
+
+          <div class="col s6 right flex-end">
+            <%= link_to("Edit", edit_drill_group_path(drill_group), :class => "waves-effect edit-button waves-light btn white teal-text") %>
+            <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect delete-button waves-light btn btn1 white red-text") %>
+          </div>
+
+        </div>
     <% end %>
-  </table>
+  </div>
+    <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light margins btn right button-margin z-depth-3") %>
 </div>

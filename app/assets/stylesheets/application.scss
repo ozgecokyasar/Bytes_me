@@ -51,13 +51,7 @@ color: lightblue;
 .signIn-right{
   float:right;
 }
-.butonIndex{
-  display: flex;
-}
 
-.btn1{
-  margin-left: 10px;
-}
 
 .fa {
   font-size: 30px;
@@ -107,7 +101,7 @@ nav > a {
 
 .box-page {
   padding-top:25px;
-  padding-bottom:50px;
+  padding-bottom:100px;
   background-color:rgba(255, 255, 255, 1);
 }
 
@@ -125,9 +119,6 @@ nav > a {
   color: #009973;
 }
 
-.delete-button {
-  background-color: #EB0C46;
-}
 .testing1{
   opacity:1;
   position:relative;
@@ -143,9 +134,6 @@ nav > a {
   padding-left: 25px;
 }
 
-.edit-button {
-  background-color: #2D89E2
-}
 
 .checkBoxDrill{
 margin-left: 10px;
