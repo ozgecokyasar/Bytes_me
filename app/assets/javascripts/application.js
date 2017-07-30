@@ -14,3 +14,14 @@
 //= require materialize
 //= require rails-ujs
 //= require_tree .
+
+$(document).ready(() => {
+  let checkboxes = [...document.getElementsByClassName('checkbox')]
+  checkboxes.map(box => {
+    box.addEventListener("click", event => {
+      checkboxes
+      .filter(x => x.id !== event.target.id)
+      .map(x => x.checked = false)
+    })
+  })
+})
