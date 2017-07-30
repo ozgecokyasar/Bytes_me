@@ -14,7 +14,3 @@
 //= require materialize
 //= require rails-ujs
 //= require_tree .
-
-$( document ).ready(function() {
-  $(".button-collapse").sideNav();
-});
