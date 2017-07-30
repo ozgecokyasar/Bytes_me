@@ -5,6 +5,9 @@ class DrillsController < ApplicationController
   end
 
   def show
+    if current_user === nil
+      redirect_to new_user_path
+    end
     @drill = Drill.find(params[:id])
     @answers = @drill.answers
     @attempted_drill = AttemptedDrill.new
