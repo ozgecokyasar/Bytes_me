@@ -23,6 +23,9 @@ resources :drills do
   resources :answers
 end
 
+resources :attempted_drills
+
+
 
    resources :drill_groups do
      member do

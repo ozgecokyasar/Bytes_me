@@ -7,11 +7,12 @@ class DrillsController < ApplicationController
   def show
     @drill = Drill.find(params[:id])
     @answers = @drill.answers
+    @attempted_drill = AttemptedDrill.new
   end
 
   def new
     @drill = Drill.new
-    
+
     @drill.drill_group_id = params[:groupsId]
 
   end
