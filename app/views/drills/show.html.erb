@@ -5,4 +5,8 @@
   <% @answers.each do |answer|%>
     <%= radio_button_tag(:answer, answer.id.to_i) %>
     <%= label_tag( ("answer_" + "#{answer.id}").to_sym, "#{answer.body}") %>
+    <br>
+  <% end %>
+  <br>
+  <%= attempt.submit "Answer" %>
   <% end %>
