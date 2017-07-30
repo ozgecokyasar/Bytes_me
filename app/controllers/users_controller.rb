@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       UserMailer.registration_confirmation(@user).deliver
 
-      redirect_to root_path, notice: 'Thank you for singing up, please confirm your email address'
+      redirect_to "/", notice: 'Thank you for singing up, please confirm your email address'
     else
       flash.now[:alert] = @user.errors.full_messages.join(', ')
       render :new
