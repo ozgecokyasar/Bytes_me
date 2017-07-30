@@ -78,11 +78,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-.navbar-fixed {
-  position: fixed;
-  top:0;
-}
-
 main {
   flex: 1 0 auto;
 }
@@ -93,19 +88,19 @@ main {
   position:relative;
   z-index: 5
 }
-
 .row {
   margin-bottom: 0px;
 }
 
 .bg-color {
   background-color: #009973;
-  padding-top: 50px;
+  padding-top: 0;
 }
 
 
+
 nav {
-  background-color: transparent;
+  background-color: teal;
   box-shadow: none;
   text-shadow: 2px 2px #009973;
 }
@@ -113,6 +108,7 @@ nav {
 nav > a {
   border-bottom-color: thick solid black;
 }
+
 
 .box-page {
   margin-top:12.5px;
