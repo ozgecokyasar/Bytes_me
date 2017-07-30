@@ -8,7 +8,10 @@
       </tr>
       <tr>
         <th>Drill Difficulty</th>
-        <td><%= f.text_field(:difficulty)%></td>
+        <td>
+          <%= f.label 'Easy', id:'online' %>
+          <%= f.check_box(:difficulty)%>
+        </td>
       </tr>
     </table>
     <div class="form-buttons">
