@@ -1,7 +1,7 @@
 <div class="index drill_groups">
+  <h2>Add New Drill Group</h2>
   <% if current_user != nil %>
     <% if current_user.is_admin? %>
-    <h2>Add New Drill Group</h2>
     <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light btn") %>
     <% end %>
   <% end %>
