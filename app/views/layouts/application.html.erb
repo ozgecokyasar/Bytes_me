@@ -8,14 +8,16 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+
   <body>
     <!-- navbar -->
     <div class="navbar-fixed">
       <nav>
         <div class="container">
           <div class="nav-wrapper">
-            <%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %>
-            <ul id="nav-mobile" class="right">
+            <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
+            <ul class="right">
+              <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
                   <li>Hello, <%= current_user.full_name %>!</li>
                   <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
@@ -31,33 +33,41 @@
     </div>
     <!-- navbar end -->
 
-    <main>
-    <div class="container">
-      <% if flash[:notice] %>
-      <div class='alert alert-success'>
-        <%= flash[:notice] %>
-      </div>
-      <% elsif flash[:alert] %>
-      <div class='alert alert-danger'>
-        <%= flash[:alert] %>
-      </div>
-      <% end %>
+  <main class="bg-color">
+    <%  unless current_page?(home_path)  %>
+    <div class="box-page">
 
-      <%= yield %>
+      <div class="container">
+        <% if flash[:notice] %>
+        <div class='alert alert-success'>
+          <%= flash[:notice] %>
+        </div>
+        <% elsif flash[:alert] %>
+        <div class='alert alert-danger'>
+          <%= flash[:alert] %>
+        </div>
+        <% end %>
+
+      <% end %>
+        <%= yield %>
+      </div>
     </div>
+
   </main>
 
-      <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-
-            <div style="align: center" class="col-lg-12 l4 offset-l2 s12">
-
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-google" aria-hidden="true"></i></a>
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      </footer>
-
+  <!-- footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div style="align: center" class="col-lg-12 l4 offset-l2 s12">
+            <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
   </body>
 </html>

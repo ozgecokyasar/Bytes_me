@@ -1,7 +1,5 @@
 <div class="index drill_groups">
-  <h2>Drill Groups</h2>
-  <%= link_to("Add New Drill Group", new_drill_group_path, :class => "action new") %>
-  <h2>Drills</h2>
+  <h2>Add New Drill Group</h2>
   <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light btn") %>
   <table class="listing">
     <tr class="header">
@@ -19,7 +17,7 @@
         <td>
           <div class = 'butonIndex'>
             <%= link_to("Edit", edit_drill_group_path(drill_group), :class => "waves-effect waves-light btn") %>
-            <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect waves-light btn btn1") %>
+            <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect delete-button waves-light btn btn1") %>
           </div>
         </td>
       </tr>
