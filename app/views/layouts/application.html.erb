@@ -11,19 +11,19 @@
   <body>
     <!-- navbar -->
     <div class="navbar-fixed">
-      <nav>
+      <nav class="z-depth-3">
         <div class="container">
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
             <a href="#" data-activates="slide-out" class="right button-collapse">
-              <i class="material-icons">menu</i>
+                <i style="margin-top: 0px" class="fa fa-bars" aria-hidden="true"></i>
             </a>
             <ul class="right hide-on-med-and-down">
               <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
-                <li>Hello, <%= current_user.full_name %>!</li>
-                <li><%= link_to 'Leader Board', leader_boards_path %> </li>
-                <li><%= link_to 'Dashboard', "#" %> </li>
+                <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
+                <li class="hello-name">|</li>
+                <li class="flex"><a href="#"><i class="material-icons">person</i><strong><%= current_user.full_name %></strong></a></li>
                 <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
                 <% else %>
                   <li><%= link_to 'Log In', new_session_path %> </li>
@@ -35,10 +35,11 @@
         </div>
       </nav>
     </div>
-    <ul class="right side-nav" id="slide-out">
+    <ul class="right side-nav teal-text" id="slide-out">
+      <li><%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %></li>
       <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
         <% if user_signed_in? %>
-          <li>Hello, <%= current_user.full_name %>!</li>
+        <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
           <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
         <% else %>
           <li><%= link_to 'Log In', new_session_path %> </li>

@@ -1,7 +1,4 @@
-
-
 <h3><%=@drill.title%></h3>
-
 
 <div>
 
@@ -17,4 +14,10 @@
     <%= attempt.submit "Answer", class:'waves-effect waves-light btn' %>
     <%= link_to "Next Drill", drill_path(@drill.id + 1), class:'waves-effect waves-light btn'%>
     <%= link_to "Back to Drill Group", drill_group_path(@drill), class:'waves-effect waves-light btn'%>
+  <% end %>
+
+  <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <%= value %>
+  </div>
   <% end %>

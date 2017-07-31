@@ -15,9 +15,10 @@
 
 */
 @import "materialize/components/color";
-$primary-color: color("white", "lighten-1") !default;
+// $primary-color: color("white", "base") !default;
 $secondary-color: color("teal", "base") !default;
 @import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "font-awesome";
 
 .field_with_errors input, .field_with_errors textarea {
@@ -44,7 +45,7 @@ color: lightblue;
 }
 
 .signIn-left{
-  float:left
+  float:left;
 }
 .signIn-right{
   float:right;
@@ -88,13 +89,17 @@ main {
 
 nav {
   background-color: rgba(20,138,124,0.6);
-  box-shadow: none;
 }
 
-nav > a {
-  border-bottom-color: thick solid black;
+nav ul a {
+  font-weight:300;
+  display:inherit;
 }
 
+.hello-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .box-page {
   padding-top:25px;
@@ -104,9 +109,10 @@ nav > a {
 
 .brand-logo {
   transition: 0.3s ease-in-out;
+  font-weight: 300;
 }
 .brand-logo:hover {
-  transform: rotate(5deg) translateX(-5px) !important;
+  color:black !important;
 }
 
 .input-field label {
@@ -126,11 +132,18 @@ nav > a {
   opacity:1;
 }
 
+ul.side-nav li > a {
+  color: teal !important;
+}
+
+.side-nav {
+  width: 170px;
+}
+
 [type="checkbox"] + label {
   padding-right: 35px;
   padding-left: 25px;
 }
-
 
 .checkBoxDrill{
 margin-left: 10px;

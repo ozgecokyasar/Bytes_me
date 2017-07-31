@@ -1,12 +1,19 @@
-<div class="index drill_groups">
-  <h2 class="h1center">Drill Group</h2>
+<div class="drill_groups">
+  <% if current_user != nil %>
+    <% if current_user.is_admin? %>
+      <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light margins btn right button-margin z-depth-3") %>
+    <% end %>
+  <% end %>
   <div class="row">
-    <% counter = 0
-    @drill_groups.each do |drill_group| %>
+    <% @drill_groups.each do |drill_group| %>
         <div class="cards col s12 z-depth-3">
           <div class="col s6">
             <h4><%= link_to(drill_group.drill_group_name,  drill_group_path(drill_group), class: "teal-text") %></h4>
-            <!-- <%= drill_group.difficulty %> -->
+            <% if (drill_group.difficulty == "0") %>
+              <h6>Beginner</h6>
+              <% else %>
+              <h6>Advanced</h6>
+            <% end %>
           </div>
 
           <div class="col s6 right flex-end">
