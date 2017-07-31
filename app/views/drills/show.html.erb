@@ -8,10 +8,10 @@
     <br>
   <% end %>
   <br>
-  <%= attempt.submit "Answer" %>
+  <%= attempt.submit("Answer", class: "btn btn-primary") %>
   <% end %>
   <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>"><%= value %></div>
-        <% end %>
-        
-<%= link_to "Next Drill", drill_path(@drill.id + 1)%>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %><br/>
+
+<%= link_to("Next Drill", drill_path(@drill.id + 1), class: "btn btn-primary")%>
