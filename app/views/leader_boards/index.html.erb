@@ -1,7 +1,10 @@
 <div class="index drills">
-  <h2>Drills Leader Board</h2>
-  <div>
-    <table class="listing">
+  <div class="user-score">
+    <h4>Your score is <%= current_user.score %></h4>
+  </div>
+  <div class="listing">
+      <h2>Drills Leader Board</h2>
+    <table >
       <tr class="header">
         <th>No.</th>
         <th>Name</th>
@@ -18,8 +21,8 @@
       <% end %>
     </table>
 </div>
-<div class="">
-  <h4>Your score</h4>
-  <h5><%= current_user.score %></h5>
-</div>
+
+
+
+
 </div>
