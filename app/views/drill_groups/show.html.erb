@@ -1,20 +1,20 @@
 <div class="index drills">
-  <div class="">
+
+  <div class="row">
     <%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn left'%>
     <% if current_user != nil %>
-    <% if current_user.is_admin? %>
-    <%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn right')  %>
+      <% if current_user.is_admin? %>
+        <%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn right')  %>
+      <% end %>
     <% end %>
-    <% end %>
-
   </div>
 
-    <%@drills.each do |d|%>
-    <div class="row">
+  <% @drills.each do |d| %>
+  <div class="row">
     <div class="cards col s12 z-depth-3">
       <div class="col s6">
         <div class="drill-link">
-          <h5><%= link_to(d.title,  drill_path(d)) %></h5>
+          <h6><%= link_to(d.title,  drill_path(d)) %></h6>
         </div>
         <div class="points">
           <%= d.points %> Points

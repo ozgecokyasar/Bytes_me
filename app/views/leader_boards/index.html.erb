@@ -4,18 +4,18 @@
   </div>
   <div class="listing">
       <h2>Drills Leader Board</h2>
-    <table >
-      <tr class="header">
-        <th>No.</th>
-        <th>Name</th>
-        <th>Score</th>
+    <table class="ld-center" >
+      <tr class="ld-center">
+        <th class="ld-center">No.</th>
+        <th class="ld-center">Name</th>
+        <th class="ld-center">Score</th>
       </tr>
       <% counter = 1 %>
       <% @users.each do |user| %>
-        <tr>
-          <td><%= counter %></td>
-          <td><%= user.first_name %></td>
-          <td><%= user.score %></td>
+        <tr class="ld-center">
+          <td class="ld-center"><%= counter %></td>
+          <td class="ld-center"><%= user.first_name %></td>
+          <td class="ld-center"><%= user.score %></td>
         </tr>
         <% counter = counter +1 %>
       <% end %>
