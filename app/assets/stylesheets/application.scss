@@ -18,6 +18,7 @@
 $primary-color: color("white", "lighten-1") !default;
 $secondary-color: color("teal", "base") !default;
 @import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "font-awesome";
 
 .field_with_errors input, .field_with_errors textarea {
@@ -90,9 +91,9 @@ nav {
   background-color: rgba(20,138,124,0.6);
 }
 
-nav > a {
-  border-bottom-color: thick solid black;
-  font-weight:100;
+nav ul a {
+  font-weight:300;
+  display:inherit;
 }
 
 .hello-name {
@@ -131,7 +132,7 @@ nav > a {
   opacity:1;
 }
 
-ul li > a {
+ul.side-nav li > a {
   color: teal !important;
 }
 

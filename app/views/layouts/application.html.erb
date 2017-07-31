@@ -16,17 +16,14 @@
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
             <a href="#" data-activates="slide-out" class="right button-collapse">
-              <i class="material-icons">
                 <i style="margin-top: 0px" class="fa fa-bars" aria-hidden="true"></i>
-
-              </i>
             </a>
             <ul class="right hide-on-med-and-down">
               <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
                 <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
                 <li class="hello-name">|</li>
-                <li><a href="#"><strong><%= current_user.full_name %></strong></a></li>
+                <li class="flex"><a href="#"><i class="material-icons">person</i><strong><%= current_user.full_name %></strong></a></li>
                 <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
                 <% else %>
                   <li><%= link_to 'Log In', new_session_path %> </li>
@@ -51,7 +48,7 @@
     </ul>
     <!-- navbar end -->
 
-  <main class="bg-color" name="top">
+  <main class="bg-color">
     <%  unless current_page?(home_path)  %>
     <div class="box-page">
 
@@ -71,12 +68,7 @@
       </div>
     </div>
 
-
-
-
   </main>
-
-
 
   <!-- footer -->
     <footer class="page-footer">
