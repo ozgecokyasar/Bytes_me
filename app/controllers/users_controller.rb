@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.score = 0;
 
     if @user.save
       UserMailer.registration_confirmation(@user).deliver

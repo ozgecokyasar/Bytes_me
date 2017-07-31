@@ -19,15 +19,20 @@
     margin-top:120px;
   }
 }
+.video-cont {
+overflow:hidden;
+position:absolute;
+height: 90vh;
+top: -50px;
+z-index:0;
+}
 
 .video-background {
   width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  overflow:hidden;
+  // position: absolute;
+  // top: 0;
+  // z-index: 0;
 }
-
 .flex {
   display: flex;
   justify-content: center;

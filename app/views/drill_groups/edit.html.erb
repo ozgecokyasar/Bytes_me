@@ -1,5 +1,5 @@
 <div class="new drill_groups">
-  <h2>Create Drill Groups</h2>
+  <h2>Edit Drill Groups</h2>
   <%= form_for(@drill_group) do |f| %>
     <table>
       <tr>
@@ -7,13 +7,20 @@
         <td><%= f.text_field(:drill_group_name) %></td>
       </tr>
       <tr>
-        <th>Drill Difficulty</th>
-        <td><%= f.text_field(:difficulty)%></td>
+        <th>Difficulty</th>
+        <td>
+          <%= f.check_box :difficulty, id:"Easy", class:"checkbox",name:'group1'  %>
+          <%= f.label "easy", for:"Easy" %>
+          <%= f.check_box :difficulty, id:"normal",class:"checkbox",name:'group1' %>
+          <%= f.label "normal", for:"normal" %>
+          <%= f.check_box :difficulty, id:"hard",class:"checkbox",name:'group1' %>
+          <%= f.label "hard", for:"hard"%>
+        </td>
       </tr>
     </table>
     <div class="form-buttons">
-      <%= f.submit("Update Drill Group", class:"waves-effect waves-light btn") %>
-      <%= link_to("  Back to Drill Groups List", drill_groups_path, :class => "waves-effect edit-button waves-light btn") %>
+      <%= f.submit("Update Drill Group", class:"waves-effect edit-button waves-light btn") %>
+      <%= link_to("  Back to Drill Groups List", drill_groups_path, :class => "waves-effect  waves-light btn") %>
     </div>
   <% end %>
 </div>
