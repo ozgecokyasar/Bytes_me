@@ -9,14 +9,13 @@
       <tr>
         <th>Difficulty</th>
         <td>
-          <%= f.check_box :difficulty, style:"opacity:1; pointer-events: auto; display: none !important;", id:"easy", class:"checkbox" %>
-          <%= f.label "easy", for:"easy" %>
+
+          <%= f.check_box :difficulty, style:"opacity:1; pointer-events: auto; display: none !important;", id:"Easy", class:"checkbox",value:'easy' %>
+          <%= f.label "Beginner", for:"Easy" %>
 
           <%= f.check_box :difficulty, style:"opacity:1; pointer-events: auto; display: none !important;", id:"normal",class:"checkbox"%>
-          <%= f.label "normal", for:"normal" %>
+          <%= f.label "Advanced", for:"normal" %>
 
-          <%= f.check_box :difficulty, style:"opacity:1; pointer-events: auto;", id:"hard",class:"checkbox" %>
-          <%= f.label "hard", for:"hard"%>
 
         </td>
       </tr>
