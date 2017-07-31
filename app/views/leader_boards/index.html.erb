@@ -10,14 +10,13 @@
         <th class="ld-center">Name</th>
         <th class="ld-center">Score</th>
       </tr>
-      <% counter = 1 %>
+      <% counter = 0 %>
       <% @users.each do |user| %>
         <tr class="ld-center">
           <td class="ld-center"><%= counter %></td>
           <td class="ld-center"><%= user.first_name %></td>
           <td class="ld-center"><%= user.score %></td>
         </tr>
-        <% counter = counter +1 %>
       <% end %>
     </table>
 </div>
