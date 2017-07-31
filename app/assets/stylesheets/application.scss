@@ -131,6 +131,14 @@ nav > a {
   opacity:1;
 }
 
+ul li > a {
+  color: teal !important;
+}
+
+.side-nav {
+  width: 170px;
+}
+
 [type="checkbox"] + label {
   padding-right: 35px;
   padding-left: 25px;

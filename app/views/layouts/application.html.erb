@@ -38,7 +38,8 @@
         </div>
       </nav>
     </div>
-    <ul class="right side-nav" id="slide-out">
+    <ul class="right side-nav teal-text" id="slide-out">
+      <li><%= link_to 'Bytes-Me!', home_path, class: "brand-logo" %></li>
       <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
         <% if user_signed_in? %>
         <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
@@ -86,7 +87,6 @@
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-google" aria-hidden="true"></i></a>
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a class="grey-text text-lighten-3 flex-end" href="#top"><i class="fa" aria-hidden="true">TOP</i></a>
           </div>
         </div>
       </div>
