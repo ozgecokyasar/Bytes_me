@@ -1,0 +1,16 @@
+<div class="index drills">
+  <h2>My Drills</h2>
+
+    <% count = 0 %>
+    <% @my_drills.each do |key, value| %>
+      <div class="drill_group">
+        <h3><%= key %></h3>
+        <h5>Score: <%= value %>%</h5>
+      </div>
+      <%= link_to("Start", drill_group_path(@drill_groups[count])) %>
+      <%= link_to("Remove", delete_my_drill_path(@drill_groups[count]))%>
+      <% count += 1 %>
+    <% end %>
+
+
+</div>

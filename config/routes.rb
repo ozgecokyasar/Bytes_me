@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'leader_boards/index'
 
   get('/', { to: 'welcome#about', as: 'home' })
@@ -35,5 +36,10 @@ resources :attempted_drills
  end
 
  resources :leader_boards, only: :index
+ resources :my_drills, only: [:index, :destroy] do
+   member do
+     get :delete
+   end
+ end
 
 end
