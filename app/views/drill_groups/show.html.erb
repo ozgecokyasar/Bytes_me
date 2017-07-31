@@ -1,5 +1,7 @@
 <div class="index drills">
 
+
+  <h1><%= @drill_group.drill_group_name %></h1>
   <div class="row">
     <%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn left'%>
     <% if current_user != nil %>

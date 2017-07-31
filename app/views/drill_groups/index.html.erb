@@ -17,8 +17,12 @@
           </div>
 
           <div class="col s6 right flex-end">
-            <%= link_to("Edit", edit_drill_group_path(drill_group), :class => "waves-effect edit-button waves-light btn white teal-text") %>
-            <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect delete-button waves-light btn btn1 white red-text") %>
+            <% if current_user != nil %>
+              <% if current_user.is_admin? %>
+                <%= link_to("Edit", edit_drill_group_path(drill_group), :class => "waves-effect edit-button waves-light btn white teal-text") %>
+                <%= link_to("Delete", delete_drill_group_path(drill_group), :class => "waves-effect delete-button waves-light btn btn1 white red-text") %>
+              <% end %>
+            <% end %>
           </div>
 
         </div>

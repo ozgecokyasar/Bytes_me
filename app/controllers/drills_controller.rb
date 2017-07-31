@@ -11,6 +11,8 @@ class DrillsController < ApplicationController
     @drill = Drill.find(params[:id])
     @answers = @drill.answers
     @attempted_drill = AttemptedDrill.new
+    @drill_group = DrillGroup.find_by(id: params[:id])
+
   end
 
   def new
@@ -64,4 +66,6 @@ class DrillsController < ApplicationController
   def drill_params
     params.require(:drill).permit(:title, :points, :drill_group_id, answers_attributes: [:body, :is_correct])
   end
+
+
 end

@@ -21,6 +21,9 @@
             <ul class="right hide-on-med-and-down">
               <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
+                <% if current_user.is_admin? %>
+                <li><%= link_to "All Drills", drills_path%></li>
+                <% end %>
                 <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
                 <li class="hello-name">|</li>
                 <li class="flex"><a href="#"><i class="material-icons">person</i><strong><%= current_user.full_name %></strong></a></li>
@@ -29,6 +32,7 @@
                   <li><%= link_to 'Log In', new_session_path %> </li>
                   <li><%= link_to 'Sign Up', new_user_path %> </li>
                 <% end %>
+
             </ul>
 
           </div>

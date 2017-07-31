@@ -5,12 +5,14 @@ class DrillGroupsController < ApplicationController
 
   def show
     # if redirect from new drill create =>
-     if Drill.find_by(id: params[:id]) != nil
-       @drill_group = Drill.find(params[:id]).drill_group
-     else
-       @drill_group = DrillGroup.find_by(id: params[:id])
-     end
-     @drills = @drill_group.drills
+    #  if Drill.find_by(id: params[:id]) != nil
+    #    @drill_group = Drill.find(params[:id]).drill_group
+    #  else
+    #    @drill_group = DrillGroup.find_by(id: params[:id])
+    #  end
+    @drill_group = DrillGroup.find_by(id: params[:id])
+    @drills = @drill_group.drills
+
    end
 
   def new
@@ -57,6 +59,9 @@ class DrillGroupsController < ApplicationController
 
   private
   def drill_group_params
-    params.require(:drill_group).permit(:drill_group_name, :difficulty)
+    params.require(:drill_group).permit(:id,:drill_group_name, :difficulty)
   end
+
+
+
 end
