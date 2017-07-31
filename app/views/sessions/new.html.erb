@@ -1,0 +1,18 @@
+
+<h1>Sign In</h1>
+
+<%= form_tag sessions_path do %>
+  <div class="input-field">
+    <%= label_tag :email %>
+    <%= email_field_tag :email, nil, class: "validate" %>
+  </div>
+  <div class="input-field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, nil, class: "validate" %>
+  </div>
+  <%= submit_tag "Sign In", class: 'waves-effect waves-light btn' %>
+<% end %>
+
+<br />
+<span class="signIn-left">Forgot password?</span>
+<span class="signIn-right"><%= link_to 'Don\'t have an account? Sign up', new_user_path %></span>

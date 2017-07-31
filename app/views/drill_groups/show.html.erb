@@ -1,0 +1,47 @@
+<div class="index drills">
+
+
+  <h1><%= @drill_group.drill_group_name %></h1>
+  <div class="row">
+    <%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn left'%>
+    <% if current_user != nil %>
+      <% if current_user.is_admin? %>
+        <%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn right')  %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% @drills.each do |d| %>
+  <div class="row">
+    <div class="cards col s12 z-depth-3">
+      <div class="col s6">
+        <div class="drill-link">
+          <h6><%= link_to(d.title,  drill_path(d)) %></h6>
+        </div>
+        <div class="points">
+          <%= d.points %> Points
+        </div>
+      </div>
+      <div class="col s6 right flex-end">
+        <% if current_user != nil %>
+          <% if current_user.is_admin? %>
+            <%= link_to("Edit", edit_drill_path(d), :class => "waves-effect edit-button waves-light btn white teal-text") %>
+            <%= link_to("Delete", delete_drill_path(d), :class => "waves-effect delete-button waves-light btn btn1 white red-text") %>
+          <%end%>
+        <%end%>
+      </div>
+
+
+    </div>
+  </div>
+  <%end%>
+
+  <div class="margins">
+    <%= link_to "Back to Drill Group", drill_groups_path, class:'waves-effect waves-light btn left'%>
+    <% if current_user != nil %>
+    <% if current_user.is_admin? %>
+    <%= link_to("Add a new Drill", "/drills/new?groupsId=#{@drill_group.id}",class: 'waves-effect waves-light btn right')  %>
+    <% end %>
+    <% end %>
+  </div>
+</div>

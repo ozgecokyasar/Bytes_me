@@ -1,0 +1,51 @@
+// Place all the styles related to the drills controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cards {
+  background-color:white;
+  border-radius:5px;
+  padding: 20px 10px 20px 10px !important;
+  margin: 10px !important;
+  display:flex;
+  align-items:center;
+}
+
+.flex-end {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.h1center {
+  text-align: center;
+}
+
+.edit-button:hover {
+  background-color: teal !important;
+  color: white !important;
+}
+
+.delete-button:hover {
+  background-color: #EB0C46 !important;
+  color: white !important;
+}
+
+.btn1{
+  margin-left:10px;
+}
+
+.margins {
+  margin-top: 15px;
+}
+
+.button-margin {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.drill-link a {
+  color: teal;
+}
+.points {
+  color: red;
+}

@@ -1,0 +1,53 @@
+<%= link_to("Back to Drill list", drills_path, :class => "waves-effect  waves-light btn") %>
+<div class="new drills">
+  <h2>Create Drills</h2>
+
+
+  <%= form_for(@drill) do |f| %>
+    <table>
+      <tr>
+        <th>Drill Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Drill Points</th>
+        <td><%= f.text_field(:points) %></td>
+      </tr>
+      <tr style="display:none;">
+        <th>Drill Group</th>
+        <td><%= f.text_field(:drill_group_id) %></td>
+      </tr>
+      <tr>
+        <th>Answers</th>
+
+      </tr>
+
+      <%= f.fields_for :answers do |answer| %>
+      <tr>
+        <th>
+          <%= answer.label :body %>
+        </th>
+        <td>
+          <%= answer.text_field :body %>
+          <%= answer.check_box :is_correct?, style:"opacity:1; pointer-events: auto; display: none !important;" , class:"checkbox" , id:"checkbox#{answer.index}"%>
+          <%= answer.label "Is correct?", for:"checkbox#{answer.index}" %>
+        </td>
+      </tr>
+
+      <% end %>
+
+      <td>
+        <div class="form-buttons">
+          <%= f.submit("Create Drill", class:'waves-effect  waves-light btn') %>
+        </div>
+      </td>
+
+      <% end %>
+
+    </table>
+
+
+
+
+
+</div>

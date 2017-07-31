@@ -1,0 +1,33 @@
+<h1>Create an account</h1>
+
+<% if @user.errors.present? %>
+<ul class="alert alert-danger">
+  <% @user.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for(@user) do |f| %>
+<div class="input-field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name%>
+</div>
+<div class="input-field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</div>
+<div class="input-field">
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+</div>
+<div class="input-field">
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+<div class="input-field">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+</div>
+<%= f.submit class: 'waves-effect waves-light btn' %>
+<% end %>

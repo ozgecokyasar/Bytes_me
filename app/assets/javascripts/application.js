@@ -15,3 +15,25 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require_tree .
+
+
+$(document).ready(() => {
+  let checkboxes = [...document.getElementsByClassName('checkbox')]
+  checkboxes.map(box => {
+    box.addEventListener("click", event => {
+      checkboxes
+      .filter(x => x.id !== event.target.id)
+      .map(x => x.checked = false)
+    })
+  })
+
+  $('.button-collapse').sideNav({
+     menuWidth: 300, // Default is 300
+     edge: 'right', // Choose the horizontal origin
+     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+     draggable: true, // Choose whether you can drag to open on touch screens,
+
+   })
+})
+
+$('.carousel.carousel-slider').carousel({fullWidth: true});

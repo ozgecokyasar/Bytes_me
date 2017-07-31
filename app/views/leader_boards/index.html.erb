@@ -1,0 +1,28 @@
+<div class="index drills">
+  <div class="user-score">
+    <h4>Your score is <%= current_user.score %></h4>
+  </div>
+  <div class="listing">
+      <h2>Drills Leader Board</h2>
+    <table class="ld-center" >
+      <tr class="ld-center">
+        <th class="ld-center">No.</th>
+        <th class="ld-center">Name</th>
+        <th class="ld-center">Score</th>
+      </tr>
+      <% counter = 1 %>
+      <% @users.each do |user| %>
+        <tr class="ld-center">
+          <td class="ld-center"><%= counter %></td>
+          <td class="ld-center"><%= user.first_name %></td>
+          <td class="ld-center"><%= user.score %></td>
+          <% counter +=  1 %>
+        </tr>
+      <% end %>
+    </table>
+</div>
+
+
+
+
+</div>

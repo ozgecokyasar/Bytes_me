@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+*/
+@import "materialize/components/color";
+// $primary-color: color("white", "base") !default;
+$secondary-color: color("teal", "base") !default;
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "font-awesome";
+
+.field_with_errors input, .field_with_errors textarea {
+  border: medium solid red;
+}
+
+.alert{
+ border-radius: 5px;
+ padding: 1em;
+}
+
+.alert.alert-success{
+ background-color: Yellowgreen;
+}
+
+.alert.alert-danger{
+ background-color: Salmon;
+}
+
+.navbarHello{
+padding-top: 15px;
+padding-bottom: 15px;
+color: lightblue;
+}
+
+.signIn-left{
+  float:left;
+}
+.signIn-right{
+  float:right;
+}
+
+.fa {
+  font-size: 30px;
+  float: left;
+  margin: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa:hover {
+  color: black;
+}
+
+.bg-color {
+  background-color: rgba(20,138,124,0.6);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  background-color: rgba(20,138,124,0.6);
+  padding:0px;
+  position:relative;
+  z-index: 5
+
+}
+.row {
+  margin-bottom: 0px;
+}
+
+
+nav {
+  background-color: rgba(20,138,124,0.6);
+}
+
+nav ul a {
+  font-weight:300;
+  display:inherit;
+}
+
+.hello-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box-page {
+  padding-top:25px;
+  padding-bottom:100px;
+  background-color:rgba(255, 255, 255, 1);
+}
+
+.brand-logo {
+  transition: 0.3s ease-in-out;
+  font-weight: 300;
+}
+.brand-logo:hover {
+  color:black !important;
+}
+
+.input-field label {
+  color: grey;
+}
+.input-field label:not(.label-icon).active {
+  color: #009973;
+}
+
+.testing1{
+  opacity:1;
+  position:relative;
+  pointer-events: auto
+
+}
+#drill_group_difficulty{
+  opacity:1;
+}
+
+ul.side-nav li > a {
+  color: teal !important;
+}
+
+.side-nav {
+  width: 170px;
+}
+
+[type="checkbox"] + label {
+  padding-right: 35px;
+  padding-left: 25px;
+}
+
+.checkBoxDrill{
+margin-left: 10px;
+}
+.signup-button {
+  border: thin white solid;
+}
+
+.AnswersChoice{
+  padding-left:40px;
+}
