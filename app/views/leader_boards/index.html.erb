@@ -7,14 +7,13 @@
         <th>Name</th>
         <th>Score</th>
       </tr>
-      <% counter = 1 %>
+      <% counter = 0 %>
       <% @users.each do |user| %>
         <tr>
-          <td><%= counter %></td>
+          <td><%= counter += 1 %></td>
           <td><%= user.first_name %></td>
           <td><%= user.score %></td>
         </tr>
-        <% counter = counter +1 %>
       <% end %>
     </table>
 </div>
