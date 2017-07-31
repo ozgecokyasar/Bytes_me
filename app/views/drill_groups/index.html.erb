@@ -1,5 +1,10 @@
 <div class="index drill_groups">
   <h2 class="h1center">Drill Groups</h2>
+  <% if current_user != nil %>
+  <% if current_user.is_admin? %>
+  <%= link_to("Add New Drill Group", new_drill_group_path, :class => "waves-effect waves-light margins btn right button-margin z-depth-3") %>
+  <% end %>
+  <% end %>
   <div class="row">
     <% counter = 0
     @drill_groups.each do |drill_group| %>
