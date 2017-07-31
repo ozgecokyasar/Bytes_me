@@ -44,7 +44,7 @@ color: lightblue;
 }
 
 .signIn-left{
-  float:left
+  float:left;
 }
 .signIn-right{
   float:right;
@@ -88,13 +88,17 @@ main {
 
 nav {
   background-color: rgba(20,138,124,0.6);
-  box-shadow: none;
 }
 
 nav > a {
   border-bottom-color: thick solid black;
+  font-weight:100;
 }
 
+.hello-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .box-page {
   padding-top:25px;
@@ -104,9 +108,10 @@ nav > a {
 
 .brand-logo {
   transition: 0.3s ease-in-out;
+  font-weight: 300;
 }
 .brand-logo:hover {
-  transform: rotate(5deg) translateX(-5px) !important;
+  color:black !important;
 }
 
 .input-field label {
@@ -131,7 +136,6 @@ nav > a {
   padding-left: 25px;
 }
 
-
 .checkBoxDrill{
 margin-left: 10px;
 }
@@ -139,20 +143,6 @@ margin-left: 10px;
   border: thin white solid;
 }
 
-
-.user-score {
-margin-top: 40px;
-background-color: #E8B416;
-height: 50px;
-width: 100%;
-display: flex;
-
-
-
-}
-
-.user-score h4 {
-  margin: auto;
-  font-weight: lightest;
-  margin: auto;
+.AnswersChoice{
+  padding-left:40px;
 }

@@ -11,7 +11,7 @@
   <body>
     <!-- navbar -->
     <div class="navbar-fixed">
-      <nav>
+      <nav class="z-depth-3">
         <div class="container">
           <div class="nav-wrapper">
             <%= link_to 'Bytes-Me!', home_path, class: "left brand-logo" %>
@@ -24,9 +24,9 @@
             <ul class="right hide-on-med-and-down">
               <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
                 <% if user_signed_in? %>
-                <li>Hello, <%= current_user.full_name %>!</li>
-                <li><%= link_to 'Leader Board', leader_boards_path %> </li>
-                <li><%= link_to 'Dashboard', "#" %> </li>
+                <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
+                <li class="hello-name">|</li>
+                <li><a href="#"><strong><%= current_user.full_name %></strong></a></li>
                 <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
                 <% else %>
                   <li><%= link_to 'Log In', new_session_path %> </li>
@@ -41,7 +41,7 @@
     <ul class="right side-nav" id="slide-out">
       <li><%= link_to 'Drill Groups', drill_groups_path	%> </li>
         <% if user_signed_in? %>
-          <li>Hello, <%= current_user.full_name %>!</li>
+        <li><%= link_to 'Leaderboard', leader_boards_path %> </li>
           <li><%= link_to 'Sign Out', sessions_path, method: :delete, data: {confirm: 'Logout?'} %></li>
         <% else %>
           <li><%= link_to 'Log In', new_session_path %> </li>
@@ -50,7 +50,7 @@
     </ul>
     <!-- navbar end -->
 
-  <main class="bg-color">
+  <main class="bg-color" name="top">
     <%  unless current_page?(home_path)  %>
     <div class="box-page">
 
@@ -86,6 +86,7 @@
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-google" aria-hidden="true"></i></a>
             <a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="grey-text text-lighten-3 flex-end" href="#top"><i class="fa" aria-hidden="true">TOP</i></a>
           </div>
         </div>
       </div>

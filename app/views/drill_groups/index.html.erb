@@ -1,12 +1,16 @@
 <div class="index drill_groups">
-  <h2 class="h1center">Drill Group</h2>
+  <h2 class="h1center">Drill Groups</h2>
   <div class="row">
     <% counter = 0
     @drill_groups.each do |drill_group| %>
         <div class="cards col s12 z-depth-3">
           <div class="col s6">
             <h4><%= link_to(drill_group.drill_group_name,  drill_group_path(drill_group), class: "teal-text") %></h4>
-            <%= drill_group.difficulty %>
+            <% if (drill_group.difficulty == "0") %>
+              <h6>Beginner</h6>
+              <% else %>
+              <h6>Advanced</h6>
+            <% end %>
           </div>
 
           <div class="col s6 right flex-end">
