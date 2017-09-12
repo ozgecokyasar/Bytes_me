@@ -22,8 +22,8 @@ $ rails server
 
 ## Versioning
 
-Ruby Version: ruby 2.4.1p111
-Rails Version: Rails 5.1.3
+* Ruby Version: ruby 2.4.1p111
+* Rails Version: Rails 5.1.3
 
 ## License
 
