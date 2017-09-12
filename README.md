@@ -1,6 +1,6 @@
 # Bytez-Me
 
-This is a multiple choice quiz testing the user's coding knowledge which my group and I build over a weekend at CodeCore developer Bootcamp.
+This is a multiple choice quiz, testing the user's coding knowledge which my group and I built over a weekend at CodeCore developer Bootcamp.
 
 # Getting Started 
 
