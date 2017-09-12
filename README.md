@@ -11,6 +11,7 @@ Follow the steps below:
 $ git clone https://github.com/ozgecokyasar/Bytes_me.git
 $ cd Bytes_me
 $ bundle install
+$ rails db:create db:migrate
 $ rails server
 
 ```
